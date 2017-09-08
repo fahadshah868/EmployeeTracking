@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmpTrack.ViewModels.User;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,14 +13,12 @@ namespace EmpTrack.Views.Login
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        LoginViewModel loginViewModel;
         public LoginPage()
         {
             InitializeComponent();
-        }
-        private async void Login_Clicked(object sender,EventArgs args)
-        {
-            //await DirectoryAuthentication.SearchByAlias();
-            App.Current.MainPage = new Views.Menu.MainPage();
+            loginViewModel = new LoginViewModel();
+            BindingContext = loginViewModel;
         }
     }
 }

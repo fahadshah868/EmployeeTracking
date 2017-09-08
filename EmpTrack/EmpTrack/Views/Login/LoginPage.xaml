@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmpTrack.Views.Login.LoginPage"
-             Title="Login">
+             Title="Login"
+             xmlns:local="clr-namespace:EmpTrack.Customization">
     
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Login" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="Login_Clicked" BackgroundColor="{StaticResource ButtonBackgroundColor}" TextColor="White"/>
+            <local:LoginButton Text="Login" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Command="{Binding LoginCommand}" TextColor="White" WidthRequest="100"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

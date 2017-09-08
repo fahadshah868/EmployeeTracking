@@ -4,8 +4,70 @@
              x:Class="EmpTrack.Views.Profile.User3ProfilePage"
              Title="Profile">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Padding="10,10,10,0">
+                <StackLayout>
+                    <Label Text="Modes Supported:" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                    <Picker Title="Modes Supported">
+                        <Picker.Items>
+                            <x:String>U.S. 70:8</x:String>
+                            <x:String>U.S. 60:7</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Worker:" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                    <Picker Title="Worker">
+                        <Picker.Items>
+                            <x:String>U.S. 70:8</x:String>
+                            <x:String>U.S. 60:7</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Worker Name:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <Entry Placeholder="Worker Name" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Work Week Begin:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand" x:Name="WorkBeginDateTime">
+                        <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+                    </DatePicker>
+                    <Label Text="Working Time Spend:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand" x:Name="WorkingTime"/>
+                    <Label Text="Part Time Hours Spend:" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                    <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Total Working Time:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <Label Text="Total Hours Remaining (as per hour of services):" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Lunch Time:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <Label Text="Normal Working Hours:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <Label Text="Any Emergency Break Hours:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <Label Text="Planned Leave:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Working On Weekends?:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                        <Switch VerticalOptions="Start" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Any Compliance Violation:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                        <Switch VerticalOptions="Start" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Label Text="Worker Authorization:" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
+                    <Entry Placeholder="Worker Authorization" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Save" VerticalOptions="Start" HorizontalOptions="EndAndExpand" BackgroundColor="#008975"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

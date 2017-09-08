@@ -5,7 +5,11 @@
 	<Application.Resources>
 
         <ResourceDictionary>
-            <Color x:Key="ButtonBackgroundColor">#09d802</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#9CBD64"/>
+                <Setter Property="BarTextColor" Value="Color.White"/>
+            </Style>
+
         </ResourceDictionary>
 
     </Application.Resources>
